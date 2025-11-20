@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.抬腕背诵" parent="@style/HeytapTheme">
+        <!-- Customize your theme here. -->
+        <item name="android:colorPrimary">#2196F3</item>
+        <item name="android:colorPrimaryDark">#1976D2</item>
+        <item name="android:colorAccent">#FF4081</item>
+        <item name="android:windowBackground">@color/background_black</item>
+        <item name="android:colorBackground">@color/background_black</item>
+        <item name="android:windowSwipeToDismiss">true</item>
+        <item name="android:colorBackgroundCacheHint">@color/background_black</item>
+    </style>
+</resources>

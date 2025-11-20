@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_black">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <com.heytap.wearable.support.widget.HeyMainTitleBar
+            android:id="@+id/default_titlebar_notime"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:heyText="@string/hey_title_bar"
+            app:heyShowClock="true" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginTop="8dp"
+            android:text="今日名句"
+            android:textSize="16sp"
+            android:gravity="center" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginTop="4dp"
+            android:text="点击卡片可刷新名句"
+            android:textSize="10sp"
+            android:gravity="center"
+            android:textColor="#888888" />
+
+        <com.heytap.wearable.support.widget.HeyMultipleDefaultItem
+            android:id="@+id/daily_sentence"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            app:heyText=""
+            app:heySummaryText=""
+            app:heyShowIcon="false"
+            style="@style/HeyMultipleDefaultItemStyle" />
+
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+
+            android:layout_marginTop="8dp">
+
+            <com.heytap.wearable.support.widget.HeyShapeButton
+                android:id="@+id/chinese_button"
+                style="@style/HeySmallShapeButtonStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginTop="2dp"
+                android:text="搜索诗名/诗文/诗人" />
+
+            <!-- 移除了英语相关功能 -->
+            <!-- <com.heytap.wearable.support.widget.HeyShapeButton
+                android:id="@+id/english_button"
+                style="@style/HeySmallShapeButtonStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginTop="2dp"
+                android:text="英语" /> -->
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+</ScrollView>
