@@ -48,7 +48,9 @@ class SearchPoem : Fragment() {
         
         val titleBar = view.findViewById<HeyBackTitleBar>(R.id.search_poem_titlebar)
         titleBar.setTitle("搜索古诗")
-        titleBar.setBackListener(null, activity)
+        titleBar.setBackListener({ 
+            parentFragmentManager.popBackStack()
+        }, activity)
         
         val searchEditText = view.findViewById<EditText>(R.id.poem_search_edit_text)
         searchEditText.hint = "输入关键字"
