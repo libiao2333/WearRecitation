@@ -66,7 +66,7 @@ class SearchResult : Fragment() {
             override fun onFling(e1: MotionEvent?, e2: MotionEvent, velocityX: Float, velocityY: Float): Boolean {
                 // 右滑返回（从左向右滑动）
                 if (e1 != null && e2.x - e1.x > 100 && Math.abs(velocityX) > Math.abs(velocityY)) {
-                    // 不在首页，右滑返回上一页
+                    // 返回搜索页面
                     parentFragmentManager.popBackStack()
                     return true
                 }
@@ -81,7 +81,9 @@ class SearchResult : Fragment() {
         
         val titleBar = view.findViewById<HeyBackTitleBar>(R.id.search_result_titlebar)
         titleBar.setTitle("搜索结果")
-        titleBar.setBackListener(null, activity)
+        titleBar.setBackListener({ 
+            parentFragmentManager.popBackStack()
+        }, activity)
         
         resultContainer = view.findViewById(R.id.search_result_container)
         poemManager = PoemManager(requireContext())

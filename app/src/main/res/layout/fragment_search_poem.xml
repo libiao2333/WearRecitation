@@ -33,6 +33,13 @@
 
             android:layout_marginTop="16dp"
             android:text="搜索" />
+            
+        <LinearLayout
+            android:id="@+id/search_history_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="16dp"/>
 
     </LinearLayout>
 </ScrollView>
